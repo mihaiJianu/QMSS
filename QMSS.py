@@ -1,5 +1,5 @@
 from random import *
-from Selection import partitionDet
+from selection.Selection import partitionDet
 
 def quickSort(l):
     assert type(L) == list, "Error! Not a list"
