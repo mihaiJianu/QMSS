@@ -1,4 +1,4 @@
-from __init__ import printSwitch
+from sorting.__init__ import printSwitch
 
 class HeapMax:
     """
