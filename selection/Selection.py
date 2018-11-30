@@ -10,7 +10,7 @@
 """
 
 from selection.HeapMin import HeapMin
-from __init__ import printSwitch
+from selection.__init__ import printSwitch
 from math import ceil
 from sorting.Sorting import mergeSort, partition
 
