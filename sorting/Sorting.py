@@ -1,7 +1,7 @@
 # coding: utf-8 
 
-from HeapMax import HeapMax
-from __init__ import printSwitch
+from sorting.HeapMax import HeapMax
+from sorting.__init__ import printSwitch
 from strutture.Stack import PilaArrayList as Stack  # Local renaming. Sometimes useful! :)
 import math
 import random
