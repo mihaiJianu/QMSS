@@ -9,7 +9,7 @@
     This module implements a Heap structure where the radix is the maximum of the items.
 """
 
-from __init__ import printSwitch
+from selection.__init__ import printSwitch
 
 
 class HeapMax:
