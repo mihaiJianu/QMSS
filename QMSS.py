@@ -26,18 +26,19 @@ def sampleMedianSelect(l):
 
     # Costruisce sottoinsieme V di 5 elementi scelti a caso da l;
     
+    m = 5
     i = 0
     V = []
     temp = l.copy()
 
-    for i in range(0, 5):
-        
-        V.append(temp.pop(temp[randint(0, len(temp) - 1)]))
+    for i in range(0, m):
+        lenTemp = len(temp)
+        V.append(temp.pop(temp[randint(0, lenTemp - 1)]))
 
     # Prende mediano da suddetto sottoinsieme, effettuando un 
     # selectionSort sui primi 3 elementi di V (il mediano occupa la terza posizione)
 
-    for k in range(0, 3):
+    for k in range(0, (m / 2) + 1):
 
         min_pos = k
         for j in range(k + 1, len(V)):
@@ -46,7 +47,7 @@ def sampleMedianSelect(l):
 
         V[min_pos], V[k] = V[k], V[min_pos]
         
-    pivot = V[2]
+    pivot = V[m / 2]
     return pivot
 
     # 
