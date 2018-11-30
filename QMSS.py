@@ -1,6 +1,6 @@
 from random import *
 
-import selection
+from Selection import *
 
 def quickSort(l):
     
@@ -11,7 +11,7 @@ def recursiveQuickSort(l, left, right):
     if left >= right:
         return
 
-    pivot = sampleMedianSelect()
+    pivot = sampleMedianSelect(l)
     
     pIndex = partitionDet(l, left, right, pivot)
     recursiveQuickSort(l, left, pIndex - 1)
@@ -45,6 +45,9 @@ def sampleMedianSelect(l):
                 min_pos = j
 
         V[min_pos], V[k] = V[k], V[min_pos]
+        
+    pivot = V[2]
+    return pivot
 
     # 
 
