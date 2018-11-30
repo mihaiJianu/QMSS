@@ -45,6 +45,8 @@ def sampleMedianSelect(l):
                 min_pos = j
 
         V[min_pos], V[k] = V[k], V[min_pos]
+     pivot = V[2]
+     return pivot
 
     # 
 
