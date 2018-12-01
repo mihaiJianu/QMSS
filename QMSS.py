@@ -25,12 +25,14 @@ def recursiveQuickSort(l, left, right):
 
 
 def sampleMedianSelect(l):
+    """
     #@param l: list 
     #@return pivot: int
 
     #Si assuma che m sia uguale a 5
     #Costruisco l'insieme V di 5 elementi scelti a caso da l
-
+    
+    """
     m = 5
     i = 0
     V = []
