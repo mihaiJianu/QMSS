@@ -1,25 +1,37 @@
 from random import *
-from selection.Selection import partitionDet
+from selection.Selection import partitionDet, quickSelectRand, quickSelectDet
 
-def quickSort(l):
+def quickSelectSort(l, select):
     assert type(l) == list, "Error! Not a list"
 
     recursiveQuickSort(l, 0, len(l) - 1)
 
 
-def recursiveQuickSort(l, left, right):
+def recursiveQuickSelectSort(l, left, right, select):
     if left >= right:
         return
 
-    pivot = sampleMedianSelect(l[left : right + 1]);
+    if select == 0:
+        pivot = sampleMedianSelect(l[left : right + 1])
+    
+    # se pivot == mediano velocizza l'esecuzione di quicksort
+    
+    elif select == 1:
+        pivot = quickSelectRand(l, int(len(l) / 2))
+    
+    # lista minima di 10 elementi, altrimenti conviene ordinarli per estrarre il mediano
+
+    elif select == 2:
+        pivot = quickSelectDet(l, int(len(l) / 2), 10)
+
     #print(pivot)
     #print("({},{})".format(left, right))
     pIndex = partitionDet(l, left, right, pivot)
     #print(l)
-    recursiveQuickSort(l, left, pIndex - 1)
+    recursiveQuickSelectSort(l, left, pIndex - 1, select)
     #print("({},{})".format(left, right))
     #print(l)
-    recursiveQuickSort(l, pIndex + 1, right)
+    recursiveQuickSelectSort(l, pIndex + 1, right, select)
     #print("({},{})".format(left, right))
     #print(l)
 
