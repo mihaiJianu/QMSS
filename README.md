@@ -18,3 +18,5 @@ invece che un modulo.
 
 Morale della favola: quando ci si riferisce a un modulo, __bisogna sempre omettere
 l'estensione .py__, onde evitare bestemmie a profusione.
+
+										-Daniele
