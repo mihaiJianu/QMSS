@@ -17,40 +17,40 @@ if __name__ == "__main__":
     if(args.sel == "med"):
 
     	cProfile.run('QMSS_module.quickSelectSort(l, 0)', 'stats.txt')
-    	pstats.Stats('stats.txt').strip_dirs().sort_stats("Time").print_stats()
+    	pstats.Stats('stats.txt').strip_dirs().sort_stats("time").print_stats()
 
     elif(args.sel == "rand"):
 
     	cProfile.run('QMSS_module.quickSelectSort(l, 1)', 'stats.txt')
-    	pstats.Stats('stats.txt').strip_dirs().sort_stats("Time").print_stats()
+    	pstats.Stats('stats.txt').strip_dirs().sort_stats("time").print_stats()
 
     elif(args.sel == "det"):
 
     	cProfile.run('QMSS_module.quickSelectSort(l, 2)', 'stats.txt')
-    	pstats.Stats('stats.txt').strip_dirs().sort_stats("Time").print_stats()
+    	pstats.Stats('stats.txt').strip_dirs().sort_stats("time").print_stats()
 
 
     cProfile.run('selectionSort(l)', 'stats.txt')
-    pstats.Stats('stats.txt').strip_dirs().sort_stats("Time").print_stats()
+    pstats.Stats('stats.txt').strip_dirs().sort_stats("time").print_stats()
 
     cProfile.run('insertionSortDown(l)', 'stats.txt')
-    pstats.Stats('stats.txt').strip_dirs().sort_stats("Time").print_stats()
+    pstats.Stats('stats.txt').strip_dirs().sort_stats("time").print_stats()
 
     cProfile.run('bubbleSort(l)', 'stats.txt')
-    pstats.Stats('stats.txt').strip_dirs().sort_stats("Time").print_stats()
+    pstats.Stats('stats.txt').strip_dirs().sort_stats("time").print_stats()
 
     cProfile.run('mergeSort(l)', 'stats.txt')
-    pstats.Stats('stats.txt').strip_dirs().sort_stats("Time").print_stats()
+    pstats.Stats('stats.txt').strip_dirs().sort_stats("time").print_stats()
 
     cProfile.run('quickSort(l)', 'stats.txt')
-    pstats.Stats('stats.txt').strip_dirs().sort_stats("Time").print_stats()
+    pstats.Stats('stats.txt').strip_dirs().sort_stats("time").print_stats()
 
     cProfile.run('heapSort(l)', 'stats.txt')
-    pstats.Stats('stats.txt').strip_dirs().sort_stats("Time").print_stats()
+    pstats.Stats('stats.txt').strip_dirs().sort_stats("time").print_stats()
 
-    cProfile.run('radixSort(l)', 'stats.txt')
-    pstats.Stats('stats.txt').strip_dirs().sort_stats("Time").print_stats()
+    cProfile.run('radixSort(l, 100, 10)', 'stats.txt')
+    pstats.Stats('stats.txt').strip_dirs().sort_stats("time").print_stats()
 
-    cProfile.run('sort(l)', 'stats.txt')
-    pstats.Stats('stats.txt').strip_dirs().sort_stats("Time").print_stats()
+    cProfile.run('l.sort()', 'stats.txt')
+    pstats.Stats('stats.txt').strip_dirs().sort_stats("time").print_stats()
 
