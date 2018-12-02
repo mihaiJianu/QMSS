@@ -2,7 +2,7 @@ from random import *
 from selection.Selection import partitionDet
 
 def quickSort(l):
-    assert type(L) == list, "Error! Not a list"
+    assert type(l) == list, "Error! Not a list"
 
     recursiveQuickSort(l, 0, len(l) - 1)
 
