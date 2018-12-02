@@ -4,7 +4,7 @@ from selection.Selection import partitionDet, quickSelectRand, quickSelectDet
 def quickSelectSort(l, select):
     assert type(l) == list, "Error! Not a list"
 
-    recursiveQuickSort(l, 0, len(l) - 1)
+    recursiveQuickSelectSort(l, 0, len(l) - 1, select)
 
 
 def recursiveQuickSelectSort(l, left, right, select):
